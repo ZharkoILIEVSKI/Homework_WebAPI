@@ -19,5 +19,18 @@ namespace WebApplication1.Mappers
             };
             return movieDto;
         }
+
+        public static Movie MapMovieDtoToMovie(this MovieDto movieDto) 
+        {
+            var movie = new Movie()
+            {
+                Id = movieDto.Id,
+                Title = movieDto.Title,
+                Genre = movieDto.Genre,
+                Description = movieDto.Description,
+                Year = movieDto.Year,
+            };
+            return movie;
+        }
     }
 }
